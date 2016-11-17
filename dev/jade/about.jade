@@ -1,0 +1,73 @@
+doctype html
+html
+    head
+        include partials/head.jade
+    
+    body
+        include partials/header.jade
+        div.main-banner.pos-relative
+            img(src="/assessment_mainImage_comp.jpg").img-responsive
+            div.carousel-caption.text-center
+                h1 Schedule a 
+                    strong FREE assessment 
+                    | with an expert
+        section
+            div.pos-relative.banner-2
+                div.container
+                    div.row
+                        div.col-xs-12.col-sm-12.col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2.textimonials.text-center.back-flowers
+                            div.row
+                                div.col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-2.col-md-8.col-md-offset-2
+                                    img(src="/quote.png" width="108").img-responsive.img-cot
+                                    blockquote
+                                        p Testimonial goes here careco TestimonTestimonial goes here careco ial goes here careco 
+                                            | Testimonial goes here careco TestimonTestimonial goes here careco
+                                        p.text-right.small
+                                            span.text-uppercase name,town state
+        br
+        section.section-1
+            div.container
+                div.row
+                    div.col-xs-12.col-sm-6.col-md-6
+                        img(src="/assessment_image1_comp.jpg" height="280" width="100%").img-responsive.intro-image
+                    div.col-xs-12.col-sm-6.col-md-6.intro-content
+                        p Serving all of Connecticuit since 2004, we have provided a wide variety of servies to thousands of satisfied clients and their families.
+                        ul.into-list
+                            li We create a customized care plan based on the needs of each client and their family.
+                            li We can provide yo with your desired level of care and support
+                            li Each caregiver is carefully matched with the client to ensulre a healthy environment
+                    
+                div.row.inline
+                    div.col-xs-12.col-sm-10.col-sm-offset-1
+                        p.fs-20
+                            strong About your assessment:
+                            | To get started, please fill the form below and an assessment specialist will contact you shortly. There is no fee or obligation.
+                div.row
+                    div.contact-form
+                        form(name="contactus")
+                            div.col-xs-12.form-group
+                                label.checkbox-inline
+                                    input(type="checkbox" name="home-assessment") 
+                                    strong.fs-20 &nbsp; Home Assessment
+                                label.checkbox-inline
+                                    input(type="checkbox" name="client-assessment") 
+                                    strong.fs-20 &nbsp; Client Assessment
+                                label.checkbox-inline
+                                    input(type="checkbox" name="home-client") 
+                                    strong.fs-20 &nbsp; Both
+                            div.col-xs-12.col-sm-8.col-md-8.form-group.form-info
+                                input(type="text" placeholder="First Name" for="fname" required).form-control
+                                br
+                                input(type="text" placeholder="Last Name" for="lname" required).form-control
+                                br
+                                input(type="number" placeholder="Phone" for="phone" required).form-control
+                                br
+                                input(type="email" placeholder="Email" for="email" required).form-control
+                            div.hidden-xs.col-sm-4.col-md-4
+                                img(src="/formPic_comp.png").img-responsive
+                            div.col-xs-12.text-right
+                                textarea(rows="4" cols="20").form-control
+                                br
+                                button(type="button").btn.btn-lg.btn-success.text-right Submit
+        br
+        include partials/footer.jade            

@@ -1,0 +1,435 @@
+
+body {
+    color: $base-font-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font-family;
+    //font-weight: $heading-font-weight;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.m-t-60 {
+    margin-top: 60px;
+}
+
+.m-b-60 {
+    margin-bottom: 60px;
+}
+
+.m-t-36 {
+    margin-top: 36px;
+}
+
+.m-b-17 {
+    margin-bottom: 17px;
+}
+
+.fs-32  {
+    font-size: 32px;   
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.inline {
+    display: inline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/************* HEADER ***************/
+header {
+ margin-top: 20px;   
+}
+
+a.phone, a.contactus {
+    color: $black;
+}
+
+#logo {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/*** navbar ****/
+
+.navbar-default {
+    background-color: $mainblue;
+    border: 0;
+    margin-bottom: 0px;
+    max-height: 50px;
+    @include border-radius(0px);
+    
+    .nav.navbar-nav {
+        display: inline-block;
+        float: none;
+    }
+    
+    .navbar-nav > li > a, 
+    .navbar-nav > li > a:hover {
+        color: $white;
+    }
+    
+    .navbar-nav > .active > a, 
+    .navbar-nav > .active > a:hover {
+        color: $white;
+        background-color: $nav-active-color;
+    }
+    
+    .navbar-nav > li {
+        border-right: 2px solid $mainblue;  
+    }
+    
+    .navbar-nav > .active > a:hover, 
+    .navbar-nav > li > a:hover {
+        background-color: $nav-active-color;
+    }
+    
+}
+/************** MAIN BODY ***************/
+.main-banner {
+    position: relative;
+    overflow: hidden;    
+}
+
+.home-banner {
+    overflow: hidden;
+    z-index: 999;
+    @media screen and (min-width: $tablet) {
+         position: absolute;
+         left: 11%;
+         top: 25%;
+         width: 30%;
+        
+        & p.banner-text {
+            font-size: 39px;  
+        }
+    }
+    
+    @media screen and (min-width: $huge) {
+        width: 27%;
+    }
+    
+    .banner-text {
+       font-size:25px;
+    }
+}
+
+.banner-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner-image-layer {
+    position: absolute;
+    width: 47%;
+    top: 1%;
+    left: -3%;
+}
+
+.banner-2 {
+    background-color: $skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .img-cot {
+       position: absolute;
+       top: 13%;
+    }
+    
+    .textimonials {
+        font-weight: 400;
+        font-size: 18px;
+        font-style: italic;
+        color: $black;
+        
+        blockquote {
+            border: 0px;
+            
+            p {
+                position: relative;
+            }
+            
+            footer {
+                background-color: none;
+            }
+        }
+    }
+    
+    & .back-flowers {
+        background-image: url("/flowers.png");
+        background-repeat: no-repeat;
+        background-size: 25%;
+        background-position-x: 100%;
+        background-position-y: 8px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        
+        @media screen and (min-width: $mobile-h) {
+            background-size: 19%;
+        }
+        
+    }
+}
+
+.banner-row {
+    height: 130px;
+    @media (min-width:$mobile+1) and (max-width:$mobile-h) {
+        height: 150px;
+    }
+    
+    @media screen and (min-width: $mobile-h+1) {
+        height: 212px;
+    }
+}
+
+.banner-circle {
+    @include circle(130px, $mainblue);
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 17px;
+    line-height: 130px;
+    color: $white;
+    position: relative;
+        top: -25px;
+    @media (min-width:$mobile+1) and (max-width:$mobile-h) {
+        @include circle(150px, $mainblue);
+        line-height: 150px;
+        font-size: 20px;
+    }
+    
+    @media screen and (min-width:$mobile-h+1) {
+        @include circle(212px, $mainblue);
+        line-height: 212px;
+        font-size: 25px;
+    }
+    
+    p {
+        display: inline-block;
+        line-height: 1.6em;
+        vertical-align: middle;
+    }
+}
+
+.article-1 {
+    
+    & .back-flowers {
+        background-image: url("/flowers.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: 100%;
+        
+        @media screen and (max-width: $mobile-h) {
+            background-size: 40%;
+        }
+    }
+    
+    & .intro-inner p {
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
+
+.div-aip {
+    position: relative;
+    min-height: 180px;
+ 
+    .img-aip {
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .circle-aip {
+        @include circle(162px, $circle-color-aip);
+        position: absolute;
+        left: 150px;
+        bottom: 0;
+        opacity: .6;
+        line-height: 162px;
+        display: inline-block;
+        vertical-align: middle;
+        
+        & > div {
+            display: inline-block;
+            line-height: normal;
+            vertical-align: middle;
+            font-weight: 900;
+            
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.circle-skyblue {
+    @include circle(212px, $circles);
+    margin: 10px;
+    
+    .circle-icons {
+        width: 50px;
+        margin: 20px auto;
+    }
+    
+    p {
+        color: white;
+        font-family: $base-font-family;
+    }
+}
+
+.main-banner .carousel-caption {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    bottom: 0;
+    background-color: #F3E9E1;
+    opacity: 0.8;
+    color: $black;
+}
+
+.form-info {
+    
+    & input {
+        height: 45px;
+        @include border-radius(0px);
+        background: $gray-form;
+    }
+}
+
+.contact-form {
+    
+    & textarea {
+        @include border-radius(0px);
+        background: $gray-form;
+    }
+    
+    & input[type="checkbox"] {
+        transform: scale(2);
+        margin-top: 10px;
+    }
+    
+    & label.checkbox-inline {
+        margin-right: 10%;
+        margin-left: 10px;
+    }
+    
+    button.btn {
+        @include border-radius(0px);
+        width: 180px;
+    }
+}
+
+.btn {
+    background: $btn-submit;
+    border-color: $btn-submit;
+}
+
+.section-1 {
+    
+    & .intro-content p {
+        font-size: 25px;
+    }
+    
+     & .intro-content ul {
+        font-size: 20px;
+    }
+    
+     & ul.into-list li {
+        background-image: url("/bulletFlower.png");
+        background-repeat: no-repeat;
+        padding-left: 55px;
+        margin: 15px 0px;
+        list-style: none;
+    }
+}
+
+
+
+//footer
+
+footer {
+    background-color: $mainblue;
+    color: $white;
+    text-align: center;
+    
+    a {
+        color: $white;
+    }
+    
+    .nav > li > a:hover {
+        background-color: $mainblue;
+    }
+    
+    .nav.navbar-nav {
+        float: none;
+        display: inline-block;
+    }
+}
+
+.social-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: inline-block;
+        margin: 0 0.25em;
+    }
+
+    span {
+        display: block;
+        width: 0; height: 0;
+        overflow: hidden;
+    }
+
+    a {
+        display: inline-block;
+        width: 2.5em;
+        height: 2.5em;
+        @include border-radius(50%);
+        text-decoration: none;
+        color: white;
+        text-align: center;
+
+        &:before {
+            font: 1.5em/1.75 "FontAwesome";
+            @include font-smoothing();
+        }
+
+        $icons: (
+            twitter:  (char: "\f099"),
+            google:   (char: "\f0d5"),
+            facebook: (char: "\f09a"),
+            instagram: (char:"\f16d"),
+            youtube: (char:"\f166")
+        );
+
+        @each $social, $icon in $icons {
+            &#icon-#{$social} {
+                background-color: $white;
+
+                &:before {
+                    content: map-get($icon, char);
+                    color: $mainblue;
+                }
+            }
+        }
+    }
+}

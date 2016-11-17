@@ -1,0 +1,27 @@
+{
+  "name": "careco",
+  "version": "1.0.0",
+  "description": "careco website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start: "nodemon gulpfile.js"
+  },
+  "author": "s.reddy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "jade": "^1.11.0",
+    "nodemon": "^1.11.0",
+    "reload": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-livereload": "^3.8.1"
+  }
+}

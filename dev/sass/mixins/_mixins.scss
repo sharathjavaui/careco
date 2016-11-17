@@ -1,0 +1,23 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin circle($width, $circle-color) {
+    width: $width;
+    height: $width;
+    background-color:  $circle-color;
+    -webkit-border-radius: $width/2;
+    -moz-border-radius: $width/2;
+    -ms-border-radius: $width/2;
+    border-radius: $width/2;
+}
+
+@mixin font-smoothing() {
+    // Font antialising on Mac OS X
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
